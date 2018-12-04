@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-navbar>
+      <button icon-button menuToggle>
+        <ion-icon  name="md-menu"></ion-icon>
+      </button>
+        <ion-title>Feed</ion-title>
+    </ion-navbar>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!--<ion-card *ngFor="let n of posts" >
+      <span class="nomePost">{{n.name}}</span>
+      <img class="fotoPost" src="{{n.foto}}">
+      <h3 class="tituloPost">{{n.titulo}}</h3>
+    <img class="imgPost" src="{{n.image}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        
+        </ion-card-title>
+
+    </ion-card-content>
+  </ion-card>-->
+
+  <ion-card class="postCard" *ngFor="let n of posts">
+      <span class="nomePost">{{n.name}}</span>
+      <img class="fotoPost" src="{{n.foto}}">
+      <h3 class="tituloPost">{{n.titulo}}</h3>
+      <img src="{{n.image}}"/>
+      <ion-item>
+          <ion-label stacked >Escreva um comentário</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-icon class="like" name="done-all"> Curtir</ion-icon>
+
+      <ion-icon class="Compartilhar" name="share-alt"> Compartilhar</ion-icon>
+
+  </ion-card>
+
+
+</ion-content>
